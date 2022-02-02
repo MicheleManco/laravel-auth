@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'GuestController@home') -> name('home');
+Route::get('/', 'GuestController@guest') -> name('guest');
+Route::get('/home', 'HomeController@home') -> name('home');
+
 
 Route::post('/register', 'Auth\RegisterController@register') -> name('register');
 
